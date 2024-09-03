@@ -10,8 +10,8 @@ from dotenv import load_dotenv
 from slack_bolt import App
 from slack_sdk.errors import SlackApiError
 
-app = App(token="xoxb-5298808072471-5306765357638-BUrqb7zP4EoauV04GBHlehiy",
-          signing_secret=os.getenv("6d1e5431208ca834f3f19fb0fbdd4710"))
+app = App(token="SLACK_TOKEN_HERE",
+          signing_secret=os.getenv("OTHER_TOKEN_HERE"))
 
 leaderboard = {}  # Moved leaderboard to global scope
 
@@ -19,13 +19,13 @@ leaderboard = {}  # Moved leaderboard to global scope
 load_dotenv()
 
 daily_topics = [
-    "song submission",
-    # "photo of what you're doing",
-    # "describe your current project",
-    # "share your favorite playlist"
+"song submission",
+"photo of what you're doing",
+"describe your current project",          
+"share your favorite playlist"
 ]
 
-channel_name = "#slackbots"
+channel_name = "#YourChannelName"
 
 
 def generate_random_time():
